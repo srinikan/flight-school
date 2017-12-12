@@ -2,17 +2,17 @@ resources:
 - name: flight-school
   type: git
   source:
-    uri: https://github.com/srinikan/flight-school
     branch: master
-- name: staging-app-1
+    uri: https://github.com/srinikan/flight-school
+- name: staging-app
   type: cf
   source:
     api: https://api.run.pivotal.io
+    organization: CCSDemo-org
     username: sprabhukrishna@gmail.com
     password: Cl0ud@123
     skip_cert_check: true
-    organization: CCSDemo-org
-    space: development    
+    space: pcfcogspace 
 
 jobs:
 - name: test-app
@@ -21,6 +21,6 @@ jobs:
     trigger: true 
   - task: tests
     file: flight-school/build.yml
-  - put: staging-app-1
+  - put: staging-app
     params:
       manifest: flight-school/manifest.yml
