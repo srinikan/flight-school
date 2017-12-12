@@ -1,3 +1,12 @@
+- name: staging-app
+  type: cf
+  source:
+    api: https://api.run.pivotal.io
+    username: sprabhukrishna@gmail.com 
+    password: Cl0ud@123 
+    organization: development 
+    space: development
+
 resources:
 - name: flight-school
   type: git
@@ -12,3 +21,6 @@ jobs:
     trigger: true 
   - task: tests
     file: flight-school/build.yml
+  - put: staging-app
+    params:
+      manifest: flight-school/manifest.yml
