@@ -3,7 +3,7 @@ resources:
   type: git
   source:
     branch: master
-    uri: https://github.com/srinikan/flight-school
+    uri: https://github.com/srinikan/flight-school.git
 - name: staging-app
   type: cf
   source:
@@ -13,8 +13,11 @@ resources:
     password: Cl0ud@123
     skip_cert_check: true
     space: pcfcogspace 
+
 jobs:
 - name: test-app
+  serial: true
+  public: true
   plan:
   - get: flight-school
     trigger: true 
