@@ -7,15 +7,6 @@ resources:
 - name: staging-app
   type: cf
   source:
-<<<<<<< HEAD
-    api: https://api.syslab.pcflabcog.com 
-    organization: dynatrace-org
-    space : dynatrace-space
-    username: Srinivasan.Kannan2@cognizant.com 
-    password: pcfaws#12 
-    skip_cert_check: true
-
-=======
     api: https://api.run.pivotal.io
     organization: CCSDemo-org
     space: pcfcogspace
@@ -23,7 +14,6 @@ resources:
     password: Cl0ud@123
     skip_cert_check: true
     
->>>>>>> 1ea54507ef205ce26670d079ea8874890e6fa2ea
 jobs:
 - name: test-app
   plan:
