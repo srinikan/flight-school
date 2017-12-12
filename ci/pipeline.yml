@@ -4,13 +4,13 @@ resources:
   source:
     uri: https://github.com/srinikan/flight-school
     branch: master
-    
 - name: staging-app-1
   type: cf
   source:
     api: https://api.run.pivotal.io
     username: sprabhukrishna@gmail.com
     password: Cl0ud@123
+    skip_cert_check: true
     organization: CCSDemo-org
     space: development    
 
