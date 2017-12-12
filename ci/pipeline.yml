@@ -1,4 +1,10 @@
 resources:
+- name: flight-school
+  type: git
+  source:
+    uri: https://github.com/srinikan/flight-school
+    branch: master
+    
 - name: staging-app
   type: cf
   source:
@@ -6,13 +12,7 @@ resources:
     username: sprabhukrishna@gmail.com
     password: Cl0ud@123
     organization: CCSDemo-org
-    space: development
-
-- name: flight-school
-  type: git
-  source:
-    uri: https://github.com/srinikan/flight-school
-    branch: master
+    space: development    
 
 jobs:
 - name: test-app
